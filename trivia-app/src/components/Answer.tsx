@@ -15,7 +15,7 @@ const SELECTED_ANSWER ='rgb(223, 158, 169)';
 const Answer: React.FC<IProps> = ({id, text, onAnswer, currentIndex}) => {
  const userAnswer =   useAppSelector((state) => state.trivia.result[currentIndex]);
   let colorAnswer = DEFAULT_COLOR;
-  if(userAnswer == id)
+  if(userAnswer === id)
   colorAnswer = SELECTED_ANSWER;
   let numAnswer = parseInt(id) + 1;
   return (
