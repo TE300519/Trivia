@@ -23,16 +23,18 @@ export const triviaSlice = createSlice({
           }], 
 
     result: new Array<string>(),
+    //todo.. userAnswers
 
 	},
 
 	reducers: {
 
   score: (state, action: PayloadAction<IAnswer>) =>{
-  let calcAnswer = [...state.result]
-  calcAnswer[action.payload.questionId] = action.payload.answerId; 
-  state.result = calcAnswer; 
+    let calcAnswer = [...state.result]
+    calcAnswer[action.payload.questionId] = action.payload.answerId; 
+    state.result = calcAnswer; 
   },
+  //setScore
 
   clean: (state) => {
     state.result = [];

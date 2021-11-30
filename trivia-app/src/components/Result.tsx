@@ -18,7 +18,7 @@ const Summary: React.FC = () => {
 
 	for(let i=0; i<questions.length; i++ ){
 
-		if(result[i] === undefined){
+		if(!result[i]){
 		   notAnswer++;
 		   continue;
 		}

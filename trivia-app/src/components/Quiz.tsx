@@ -17,9 +17,7 @@ const Quiz: React.FC<IProps> = ({onAnswer, currentIndex}) => {
 
     return (
       <div>
-        <div className="question">{currentQuiz.question}</div>
-        <br/>
-        <br/>
+        <div style={{marginBottom: '20px'}} className="question">{currentQuiz.question}</div>
         <ul>
            {currentQuiz.answers.map((answer: string, index:any) =>
             <li className="answer">

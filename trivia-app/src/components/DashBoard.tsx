@@ -15,14 +15,14 @@ const   DashBoard : React.FC = () => {
   const navigate =  useNavigate();
   let currentIndex = -1
 
-  if(params.id != undefined)
-  currentIndex = parseInt(params.id);
+  if(params.id)
+    currentIndex = parseInt(params.id);
   if(!questions[currentIndex]){
     return <p>Item {params.id} not found!</p>;
   }
 
 
-  const onAnswer = (answerId: string) => {
+  const onAnswerClick = (answerId: string) => {
    const updatAnswer = {
         questionId: currentIndex,
         answerId: answerId
@@ -50,9 +50,7 @@ const   DashBoard : React.FC = () => {
 
     return (
       <div className="container">
-      <Quiz onAnswer={onAnswer} currentIndex={currentIndex} /> 
-      <br/>
-      <br/>
+      <Quiz onAnswer={onAnswerClick} currentIndex={currentIndex} /> 
       <Navigate handleClick={handleClick}/>
     </div>
 
