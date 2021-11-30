@@ -3,7 +3,7 @@ import Quiz from  './Quiz';
 import React from 'react';
 import { useNavigate, useParams } from 'react-router';
 import { useAppSelector, useAppDispatch } from '../store/hooks';
-import { score} from '../store/triviaSlice';
+import { setScore} from '../store/triviaSlice';
 import Navigate from'./Navigate';
 import './DashBoard.css';
 
@@ -28,7 +28,7 @@ const   DashBoard : React.FC = () => {
         answerId: answerId
     };
 
-    dispatch(score(updatAnswer));
+    dispatch(setScore(updatAnswer));
 }
 
 
@@ -36,9 +36,12 @@ const   DashBoard : React.FC = () => {
       const size = questions.length;
       switch(buttonName){
           case "back":
-               navigate(`../${Math.abs((currentIndex - 1)) % size}`);
-               break;
+               if(currentIndex -1 >= 0)
+                navigate(`../${Math.abs((currentIndex - 1)) % size}`);
+                break;
+               
           case "next":
+            if(currentIndex + 1 < questions.length)
                navigate(`../${(currentIndex + 1) % size}`);
                break;
           case "submit":

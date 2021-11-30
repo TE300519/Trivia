@@ -22,7 +22,7 @@ const Summary: React.FC = () => {
 		   notAnswer++;
 		   continue;
 		}
-        if(questions[i].AnswerOfQuiz === result[i])
+        if(questions[i].correctAnswer === result[i])
 		   corrects ++;
 		else
 		wrongs ++;
