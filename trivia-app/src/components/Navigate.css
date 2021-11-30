@@ -1,0 +1,17 @@
+.navigate{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    height: 400;
+} 
+
+
+.nav{
+   width: 100px;
+   height: 60px;
+   font-size: x-large;
+   font-weight: bold;
+   background-color:pink;
+ 
+
+}

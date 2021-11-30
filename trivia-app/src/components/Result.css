@@ -1,0 +1,26 @@
+.result{
+ 
+    font-weight: bold;
+    text-align: center;
+    margin: 15px;
+    font-size: 25px;
+}
+
+.summary{
+  text-align: center;
+  margin: auto; 
+  background-color: rgb(228, 186, 228);
+  width: 400px;
+  height: 450px;
+ 
+  
+}
+
+.reset{
+    width: 150px;
+    height: 60px;
+    font-size: x-large;
+    font-weight: bold;
+    background-color:pink;
+    margin: 50px;
+}

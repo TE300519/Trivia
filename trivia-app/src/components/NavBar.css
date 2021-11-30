@@ -1,0 +1,28 @@
+/* ul{
+    display: 'flex';
+    justify-content: 'center';
+} */
+
+.nav-active {
+	color:rgb(218, 83, 105);
+
+}
+Link {
+    padding: Left '10px';
+    padding: Right '10px';
+    
+}
+
+nav{
+    display: 'flex';
+    justify-content:space-between;
+
+}
+
+.main{
+    text-align: center;
+    margin: auto; 
+     background-color: rgb(228, 186, 228);
+    width: 400px;
+    height: 100px;
+  }   
